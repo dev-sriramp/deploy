@@ -2,13 +2,13 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: admin-user
-  namespace: kubernetes-dashboard
+  namespace: sriramparamasivam
 ---
 apiVersion: v1
 kind: Secret
 metadata:
   name: admin-user-token
-  namespace: kubernetes-dashboard
+  namespace: sriramparamasivam
   annotations:
     kubernetes.io/service-account.name: admin-user
 type: kubernetes.io/service-account-token
@@ -25,7 +25,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: admin-user
-  namespace: kubernetes-dashboard
+  namespace: sriramparamasivam
 apiVersion: apps/v1
 kind: Deployment
 metadata:
